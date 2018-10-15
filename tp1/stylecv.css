@@ -10,8 +10,8 @@ table
 }
 img
 {
-    width: 5em;
-    height: 5em;
+    width: "50";
+    height: "50";
 }
 #titre_principal
 {
@@ -31,6 +31,20 @@ tr:nth-child(2n+1)
 }
 img:hover
 {
-    transform : scale(5);
+    transform : scale(2);
+}
+tr:hover
+{
+    background-color: darkgoldenrod;
 }
 
+@media only screen and (max-width: 640px) {
+    body {
+      background-color: yellowgreen;
+    }
+  }
+  @media only screen and (min-width: 400px) and (max-width: 640px) {
+    body {
+     background-color: thistle;
+  }
+}
