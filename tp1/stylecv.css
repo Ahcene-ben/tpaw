@@ -6,7 +6,7 @@ table
 {
     border-collapse: collapse;
     width: 100%;
-    te
+    background-color: white;
 }
 img
 {
@@ -16,5 +16,21 @@ img
 #titre_principal
 {
     text-align: center;
+}
+body
+{
+    background-color: gray;
+}
+a:hover
+{
+    color: orange;
+}
+tr:nth-child(2n+1)
+{
+    background-color: cadetblue;
+}
+img:hover
+{
+    transform : scale(5);
 }
 
