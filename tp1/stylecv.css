@@ -51,6 +51,15 @@ tr:hover
 
 .contour
 {
-    border: 1px solid black;
-    text-align: justify;
+   
+    background: url('fond_degraderouge.png') repeat-x;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 6px 6px 0px black;
+
 }
