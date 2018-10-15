@@ -38,12 +38,12 @@ tr:hover
     background-color: darkgoldenrod;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 840px) {
     body {
       background-color: yellowgreen;
     }
   }
-  @media only screen and (min-width: 400px) and (max-width: 640px) {
+  @media only screen and (min-width: 600px) and (max-width: 840px) {
     body {
      background-color: thistle;
   }
