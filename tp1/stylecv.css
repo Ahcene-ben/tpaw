@@ -10,8 +10,8 @@ table
 }
 img
 {
-    width: "50";
-    height: "50";
+    width: 3em;
+    height: 2em;
 }
 #titre_principal
 {
@@ -47,4 +47,10 @@ tr:hover
     body {
      background-color: thistle;
   }
+}
+
+.contour
+{
+    border: 1px solid black;
+    text-align: justify;
 }
