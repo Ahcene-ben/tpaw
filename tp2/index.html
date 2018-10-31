@@ -1,54 +1,58 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="formulaire.js"></script>
-    </head>
-    <body onload="hide()">        
-        <h1 class="titre">Saisie d'une fiche "Personne"</h1>
-        <form action="" method="post">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="formulaire.js"></script>
+</head>
+
+<body onload="hide()">
+    <h1 class="titre">Saisie d'une fiche "Personne"</h1>
+    <form action="" method="post">
         <div>
             <label for="nom">Nom </label>
             <input type="text" id="nom" name="nom" minlength="5" maxlength="20" />
-            
+
         </div>
         <div>
             <label for="prenom">Prénom </label>
-            <input type="text" id="prenom" name="prenom"  minlength="5" maxlength="20" />
-            
+            <input type="text" id="prenom" name="prenom" minlength="5" maxlength="20" />
+
         </div>
         <div>
             <label for="date">Date de naissance</label>
             <input type="date" id="date" name="date" />
-            
+
         </div>
         <div>
             <label for="adresse">Adresse </label>
-            <input type="text" id="adresse" name="adresse"  minlength="5" maxlength="50"/>
-            
+            <input type="text" id="adresse" name="adresse" minlength="5" maxlength="50" />
+
         </div>
         <div>
             <label for="mail">Mail </label>
             <input type="email" id="mail" name="mail" minlength="5" />
-            
+
         </div>
-        <div id="button">
-            
+        <div id="buttons">
             <input type="button" id="button" value="Valider" onclick="validation()">
-            
+            <input type="reset" id="reset" value="Vider les champs">
         </div>
         
-    </form>
-    
-    <div id="error" > </div> 
 
-<div id="resultat"> </div>
-    </body>
+    </form>
+
+    <div id="error"> </div> 
+
+    <div id="resultat"> </div>
+
+</body>
+
 </html>

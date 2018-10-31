@@ -24,21 +24,29 @@ input{
     width: 200px;
     box-sizing: border-box;
     border: 1px solid #999;
+    border-radius: 1em;
+
 }
 input:focus{
     /* Pour souligner légèrment les éléments actifs */
     border-color: #000;
 }
 
-#button{
+#button,#reset{
     
-    width: 60px;
+    width: auto;
     background-color: white;
     border-radius: 1em;
-
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
 }
 #button:hover{
-    background-color: #CD853F;
+    background-color: green;
+}
+#reset:hover{
+    background-color: yellowgreen;
 }
 .titre{
     text-align: center;
@@ -63,4 +71,9 @@ input:focus{
     margin-top: 10px;
     color: white;
 }
-
+body{
+   background-color: #D3D3D3;
+}
+form{
+   background-color: #FFF5EE;
+}
