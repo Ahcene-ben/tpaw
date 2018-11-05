@@ -13,6 +13,7 @@ $(document).ready(function () {
             //     color: 'red'
             // });
             $(this).addClass("is-invalid");
+            $(date).removeClass("is-invalid");
         }
         else {
             $(this).removeClass("is-invalid");
@@ -34,6 +35,9 @@ $(document).ready(function () {
         verifier(date);
         verifier(adresse);
         verifier(mail);
+        
+         $('#myModal').modal("show");
+         $('.modal-body').html('\<a href="https://maps.googleapis.com/maps/api/staticmap?center=paris,fr&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284 " \><img src="map.png"/>\<\/a\>');
     });
 
     function verifier(item){
@@ -45,9 +49,9 @@ $(document).ready(function () {
             // });
 
             item.addClass("is-invalid");
+            
         }
     }
-    
     
     
 });
