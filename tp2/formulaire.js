@@ -15,11 +15,13 @@ function validation() {
         document.getElementById("resultat").style.display = 'block';
         document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
         document.getElementById("error").style.display = 'none';
+        
     }
     else {
         document.getElementById("resultat").style.display = 'none';
         document.getElementById("error").innerHTML = "Les champs doivent avoir minimum " + minlength + " caractéres";
         document.getElementById("error").style.display = 'block';
+        
     }
 
 }
@@ -35,7 +37,8 @@ function hide() {
     if (nom.value.length == 0 && prenom.value.length == 0 && adresse.value.length == 0 &&
         mail.value.length == 0 && date.value.length == 0) {
         document.getElementById("error").style.display = 'none';
-        document.getElementById("resultat").style.  display = 'none';
+        document.getElementById("resultat").style.display = 'none';
+        
     }
 }
 function changeText(id) {
