@@ -11,7 +11,7 @@ function validation() {
 
     if (nom.value.length >= minlength && prenom.value.length >= minlength
         && date.value.length >= minlength && adresse.value.length >= minlength && mail.value.length >= minlength) {
-
+            
         document.getElementById("resultat").style.display = 'block';
         document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
         document.getElementById("error").style.display = 'none';
