@@ -26,34 +26,18 @@ $(document).ready(function () {
 
     });
 
-    $("#envoi").click(function (e) {
-        e.preventDefault(); // on annule la fonction par défaut du bouton d'envoi
+    $("#envoi").on("click", function (event) {
+        event.preventDefault(); // on annule la fonction par défaut du bouton d'envoi
 
-        if ($("nom").val() != "" && $("prenom").val() != "" && $("date").val() != "" && $("adresse").val() != "" &&
-            $("mail").val() != "") {
+        if ($("nom").val() !== "" && $("prenom").val() !== "" && $("date").val() !== "" && $("adresse").val() !== "" &&
+            $("mail").val() !== "") {
+
             $('#myModal').modal("show");
             $('.modal-title').html("Bienvenue " + document.querySelector("#inputPrenom").value);
-            $('.modal-body').html("Vous etes nés le  "+ document.querySelector("#inputDate").value +"</br> et vous habitez à :"+'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=' + document.querySelector("#inputAdresse").value + '&zoom=10&size=400x300&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/>');
-           
-           
-        }
+            $('.modal-body').html("Vous etes nés le  " + document.querySelector("#inputDate").value + "</br> et vous habitez à :" + '<img src="https://maps.googleapis.com/maps/api/staticmap?markers=' + document.querySelector("#inputAdresse").value + '&zoom=10&size=400x300&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/>');
+
+        } 
     });
-
-    /*
-    function verifier(item) {
-        if (item.val() == "") { // si le champ est vide
-            $("#erreur").css('display', 'block'); // on affiche le message d'erreur
-            // item.css({ // on rend le champ rouge
-            //     borderColor : 'red',
-            //     color : 'red'
-            // });
-
-            item.addClass("is-invalid");
-
-        }
-    }
-    */
-
 
 
 });
