@@ -15,8 +15,9 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/form-jquery-validation.js"></script>
     <script src="js/gps.js"></script>
+    <script src="js/form-jquery-validation.js"></script>
+    
 
 </head>
 
@@ -25,7 +26,7 @@
         <h4>Ajouter un contact</h4>
         <!-- Add your site or application content here -->
 
-        <form>
+        <form id="formulaire">
             <div class="form-row">
                 <div class="form-group col-2">
                     <label for="name">Nom</label>
@@ -33,7 +34,7 @@
                 <div class="form-group col">
                     <input type="text" class="form-control" placeholder="" id="name">
                 </div>
-                <div class="form-group col-1">
+                <div id="compteur1" class="form-group col-1">
                     0 car.
                 </div>
             </div>
@@ -44,7 +45,7 @@
                 <div class="form-group col">
                     <input type="text" class="form-control" placeholder="" id="firstname">
                 </div>
-                <div class="form-group col-1">
+                <div id="compteur2" class="form-group col-1">
                     0 car.
                 </div>
             </div>
@@ -70,10 +71,12 @@
                     </div>
                 </div>
                 <div class="form-group col-1">
-                    <button class="btn btn-warning" type="button" id="gps">📍 GPS</button>
+                    <button class="btn btn-warning" type="button" id="gps" >📍 GPS</button>
                 </div>
+               
                 <div class="col-1">
                 </div>
+              
             </div>
             <div class="form-row">
                 <div class="form-group col-2">
@@ -87,17 +90,17 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <button type="button" class="btn btn-primary">Ajouter</button>
+                    <button id="valider" type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </form>
 
-        
+        <div id="success"></div>
 
         <hr>
-        <h4>Liste des contacts</h4>
+        <h4 id="liste_des_contacts" style="display: none;">Liste des contacts</h4>
 
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover" id="table" style="display: none;">
             <thead>
                 <tr>
                     <th>Nom</th>
@@ -109,25 +112,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>oConnor</td>
-                    <td>Sarah</td>
-                    <td>21/01/2000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
-                        <a href="https://maps.google.com/?q=Paris">Paris</a>
                     </td>
                     <td>
-                        <a href="mailto:sarah.oconnor@blabla.com">sarah.oconnor@blabla.com</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>Vandamme</td>
-                    <td>JL</td>
-                    <td>01/01/1950</td>
                     <td>
-                        <a href="https://maps.google.com/?q=Bali">Bali</a>
                     </td>
                     <td>
-                        <a href="mailto:jlv@blabla.com">jlv@blabla.com</a>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>
