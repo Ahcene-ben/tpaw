@@ -85,15 +85,42 @@ $( document ).ready(function() {
                   
                    
                    // ajout des valeurs saisie dans le tableau
+                   /*
                    document.querySelector("table tbody").innerHTML = document.querySelector("table tbody")
                    .innerHTML +'<tr><td>'+localStorage.getItem("name")+'</td><td>'+localStorage.getItem("firstname") +'</td><td>'+localStorage.getItem("birth")+'</td><td><a href="https://maps.google.com/maps?q=' +localStorage.getItem("adresse")+'">'+localStorage.getItem("adresse") +'</a></td><td><a href=mailto:>'+localStorage.getItem("mail")+'</a></td>';
                    }
+                  
+                   document.querySelector("table tbody").innerHTML = document.querySelector("table tbody")
+                   .innerHTML +'<tr><td>'+contactStore.getList.name.val()+'</td><td>'+localStorage.getItem("firstname") +'</td><td>'+localStorage.getItem("birth")+'</td><td><a href="https://maps.google.com/maps?q=' +localStorage.getItem("adresse")+'">'+localStorage.getItem("adresse") +'</a></td><td><a href=mailto:>'+localStorage.getItem("mail")+'</a></td>';
+                   */ 
+                }
+                   
                   
             });
             
             $("#gps").on("click",function() { 
                 getLocation();
                 
+            });
+
+            $("#valider").on("click",function() { 
+                contactStore.add()
+
+                var contactList = contactStore.getList();
+                console.log(contactList)
+                
+                for(var index in contactList){
+                    console.log(contactList[index].name);
+                    document.querySelector("table tbody").innerHTML = 
+                    document.querySelector("table tbody").innerHTML +
+                    '<tr>'+
+                        '<td>'+contactList[index].name+'</td>'+
+                        '<td>'+contactList[index].firstname+'</td>'+
+                        '<td>'+contactList[index].date+'</td>'+
+                        '<td>'+contactList[index].adress+'</td>'+
+                        '<td>'+contactList[index].mail+'</td>'+
+                    '<tr>';
+                  }
             });
 
     
