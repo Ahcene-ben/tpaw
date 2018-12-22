@@ -33,6 +33,7 @@ $( document ).ready(function() {
                 else{
                     $("#firstname").css("border-color","#48DE14");
                 }
+                /*
                 if($("#birth").val().length < 5 ){
                     $("#birth").css("border-color","#ff0000");
                     valid=false;
@@ -40,6 +41,7 @@ $( document ).ready(function() {
                 else{
                     $("#birth").css("border-color","#48DE14");
                 }
+                */
                 if($("#adresse").val().length < 5 ){
                     $("#adresse").css("border-color","#ff0000");
                     valid=false;
@@ -117,7 +119,8 @@ $( document ).ready(function() {
                         '<td>'+contactList[index].name+'</td>'+
                         '<td>'+contactList[index].firstname+'</td>'+
                         '<td>'+contactList[index].date+'</td>'+
-                        '<td>'+contactList[index].adress+'</td>'+
+                   /*     '<td>'+contactList[index].adress+'</td>'+   */
+                        '<td><a href="https://maps.google.com/maps?q=' +contactList[index].adress+'">' + contactList[index].adress +'</a></td>'+
                         '<td>'+contactList[index].mail+'</td>'+
                     '<tr>';
                   }

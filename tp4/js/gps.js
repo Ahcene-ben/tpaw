@@ -15,7 +15,7 @@ function showPosition(position) {
     //$("#adresse").val(latlon);
     $("#map").html("<img src='" + img_url + "'>");
 
-    var geocoder = new google.maps.Geocoder;
+    var geocoder = new google.maps.Geocoder();
     var latlng = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
