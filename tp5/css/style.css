@@ -4,10 +4,12 @@
   width: 400px;
 }
 body {
-  width: 300;
+  width: 300px;
+  height: 400px;
   background-image: url("img.jpg");
   background-repeat: repeat-y;
   background-position: center;
+  
 }
 .card {
   margin: auto;
