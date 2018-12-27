@@ -1,0 +1,19 @@
+#weatherApp {
+  margin: auto;
+  margin-top: 20px;
+  width: 400px;
+}
+body {
+  width: 300;
+  background-image: url("img.jpg");
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.card {
+  margin: auto;
+  width: 400px;
+}
+h4{
+  color: red;
+}
+
