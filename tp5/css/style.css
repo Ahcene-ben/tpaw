@@ -1,14 +1,14 @@
 #weatherApp {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
   width: 400px;
 }
 body {
-  width: 300px;
-  height: 400px;
+  width: 300;
   background-image: url("img.jpg");
+  background-repeat: no-repeat;
+
   background-position: center;
-  
 }
 .card {
   margin: auto;
