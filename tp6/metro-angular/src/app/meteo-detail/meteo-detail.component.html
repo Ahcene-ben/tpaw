@@ -1,5 +1,5 @@
 <!-- meteo de la ville selectionnée -->
-<div *ngIf="meteo && meteo.cod === 200">
+<div *ngIf="meteo && meteo.cod === 200" id="zer"> 
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -12,10 +12,10 @@
 
   <div class="card" style="width:300px; margin: 0 auto" v-if="meteo">
     <div class="card-header">
-      {{meteo.name}}.{{ meteo.sys.country }} , {{ meteo.dt | date:'shortDate' }}
+      {{meteo.name}}.{{ meteo.sys.country }} , {{ meteo.dt | date:'fullDate' }}
     </div>
     <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
-      alt="Card image cap">
+      alt="Card image cap" >
     <div class="card-body">
       <h5 class="card-title">
         <i v-bind:class="'wi wi-owm-day-'+meteo.weather[0].id"></i>
