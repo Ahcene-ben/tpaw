@@ -12,6 +12,7 @@ export class MeteoService {
   getMeteo(name: string): Promise<any> {
     console.log('from service', name);
 
+    // tslint:disable-next-line:prefer-const
     let m = new MeteoItem();
 
     // tslint:disable-next-line:max-line-length
