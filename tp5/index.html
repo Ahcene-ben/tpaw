@@ -70,17 +70,18 @@
         <div class='vide' v-if="cityWeatherLoading"> Chargement de la météo...</div>
         <div v-if="cityWeather">
 
-            <div class="card" style="width: 25rem;" v-if="cityWeather">
+            <div class="card carr" style="width: 25rem;" v-if="cityWeather">
                 <div class="card-header">
                     {{cityWeather.name}}.{{ cityWeather.sys.country }}
 
                 </div>
+                <!--
                 <img class="card-img-top" v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lat+','+cityWeather.coord.lon+'&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'"
                     alt="Card image cap">
-
+              -->
                 <div class="card-body">
                     <h5 class="card-title">
-                        <i v-bind:class="'wi wi-owm-day-'+cityWeather.weather[0].id"></i>
+                        <i v-bind:class="'wi wi-owm-day-'+cityWeather.weather[0].id" id="icon" ></i>
                         {{cityWeather.main.temp}}<i class="wi wi-celsius"></i>
                     </h5>
                     <p class="card-text">{{cityWeather.weather[0].description}}</p>
@@ -108,9 +109,14 @@
 
                 </ul>
             </div>
+
+            <div class="map" style="width: 25rem" v-if="cityWeather">
+                <img class="card-img-top" v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lat+','+cityWeather.coord.lon+'&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'"
+                alt="Card image cap">
+            </div>
         </div>
     </div>
-
+   
 
     <!-- fin: formulaire de saisie de ville -->
 </div>

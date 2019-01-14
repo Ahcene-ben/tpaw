@@ -1,14 +1,13 @@
 #weatherApp {
   margin: auto;
   margin-top: 40px;
-  width: 400px;
+  width: 500px;
+  margin-left: 20px;
 }
 body {
-  width: 300;
-  height: 600;
-  background-image: url("img.jpg");
-  background-repeat: repeat-y;
-  background-position: center;
+  margin: 0 auto;
+  background: url(../img/img.jpg) no-repeat center;
+  background-size: cover;
 
 }
 .card {
@@ -18,4 +17,12 @@ body {
 h4{
   color: red;
 }
-
+.map {
+  margin-bottom: 100px;
+  background-color: transparent;
+  margin-left: 150%;
+  margin-top: -90%;
+}
+#icon{
+  font-size:4em; 
+}
